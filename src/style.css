@@ -1,0 +1,17 @@
+h1
+{
+    color:red;
+}
+body{
+    background-color: aquamarine;
+}
+.abc
+{
+    font-size: 100px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#one
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
