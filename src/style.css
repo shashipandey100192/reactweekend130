@@ -15,3 +15,11 @@ body{
 {
     font-family: Arial, Helvetica, sans-serif;
 }
+.h1
+{
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 0px 5px 5px black;
+    color:white;
+    
+}
