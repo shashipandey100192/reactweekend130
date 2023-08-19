@@ -24,8 +24,8 @@ export function Myhome1()
 {
     const name="kumar";
     return <Fragment>
-        <h2>this is heading</h2>
-        <p>sdhfjsdh fjshdjfhsdjfhsd</p>
+        <h2>this is heading oooooooooooooooooooooooooooooooooooo</h2>
+        <p>sdhfjsdh fjshdjfhsdjfh sdeeeeeeeeeeeeeeeeeeeeeeeeeeeee </p>
         <ul>
             <li>Home</li>
             <li>Home {10+60}</li>
