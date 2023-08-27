@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { RegistorModal } from './Mymodals'
 
 function Mynav() {
   return (
@@ -18,7 +19,7 @@ function Mynav() {
             <Link className="nav-link" to="/reactbootstrap">reactBS</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+            <Link className="nav-link" to="uimetrial">metrial</Link>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,9 +39,13 @@ function Mynav() {
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-success" type="submit">Search</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registor">
+          Registor
+      </button>
         </form>
       </div>
     </div>
+    <RegistorModal/>
   </nav>
   )
 }

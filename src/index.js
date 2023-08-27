@@ -11,6 +11,7 @@ import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myhomepage from './modules/dashboard/Myhomepage';
 import Myreactbootstrappage from './modules/dashboard/Myreactbootstrappage';
 import Mynav from './modules/shares/Mynav';
+import Myuimetrial from './modules/dashboard/Myuimetrial';
 
 
 
@@ -24,6 +25,7 @@ root.render(
        <Route path='register' element={<Registerpage/>}/>
        <Route path='landing' element={<Myhomepage/>}/>
        <Route path='reactbootstrap' element={<Myreactbootstrappage/>}/>
+       <Route path='uimetrial' element={<Myuimetrial/>}/>
        <Route path='*' element={<Myerrorpage/>}/>
       </Routes>
     </BrowserRouter>
