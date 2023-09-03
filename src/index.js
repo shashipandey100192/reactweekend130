@@ -13,6 +13,7 @@ import Myreactbootstrappage from './modules/dashboard/Myreactbootstrappage';
 import Mynav from './modules/shares/Mynav';
 import Myuimetrial from './modules/dashboard/Myuimetrial';
 import Parentelement from './modules/dashboard/Parentelement';
+import Databinding from './modules/dashboard/Databinding';
 
 
 
@@ -28,6 +29,7 @@ root.render(
        <Route path='reactbootstrap' element={<Myreactbootstrappage/>}/>
        <Route path='uimetrial' element={<Myuimetrial/>}/>
        <Route path='props' element={<Parentelement/>}/>
+       <Route path='binding' element={<Databinding/>}/>
        <Route path='*' element={<Myerrorpage/>}/>
       </Routes>
     </BrowserRouter>
