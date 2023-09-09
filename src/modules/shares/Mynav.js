@@ -27,6 +27,9 @@ function Mynav() {
           <li className="nav-item">
             <Link className="nav-link" to="binding">data binding</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="myaxios">axios</Link>
+          </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
@@ -45,7 +48,7 @@ function Mynav() {
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-success" type="submit">Search</button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registor">
+          <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registor">
           Registor
       </button>
         </form>
