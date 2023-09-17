@@ -20,6 +20,7 @@ import Servicelandingpage from './modules/services/Servicelandingpage';
 import Mycar from './modules/services/Mycar';
 import Mymobile from './modules/services/Mymobile';
 import Myleptop from './modules/services/Myleptop';
+import Detailspage from './modules/dashboard/Detailspage';
 
 
 
@@ -37,6 +38,7 @@ root.render(
        <Route path='props' element={<Parentelement/>}/>
        <Route path='binding' element={<Databinding/>}/>
        <Route path='myaxios' element={<Apiaxios/>}/>
+       <Route path='myaxios/view/:id' element={<Detailspage/>}/>
        <Route path='mygraph' element={<Mycharts/>}/>
        <Route path='myservice' element={<Servicelandingpage/>}>
               <Route path='mycar' element={<Mycar/>}/>
@@ -45,6 +47,9 @@ root.render(
               <Route path='*' element={<Myerrorpage/>}/>
        </Route>
        <Route path='*' element={<Myerrorpage/>}/>
+
+
+
       </Routes>
     </BrowserRouter>
 

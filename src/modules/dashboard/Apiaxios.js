@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 let mystatus;
 
 function Apiaxios() {
@@ -11,6 +12,10 @@ const [sv,sf] = useState([])
             sf(res.data)
         })
     }
+
+    useEffect(()=>{
+        mygetapi();
+    },[])
 
     return (
         <Fragment>
@@ -27,6 +32,8 @@ const [sv,sf] = useState([])
                                     <th scope="col">userId</th>
                                     <th scope="col">title</th>
                                     <th scope="col">complited status</th>
+                                    <th scope="col">Status</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,6 +44,11 @@ const [sv,sf] = useState([])
                                             <td>{d.userId}</td>
                                             <td>{d.title}</td>
                                             <td>{d.completed===true ? "True":"False"}</td>
+                                            <td>
+                                                <Link to={`view/${d.id}`} className='btn btn-info btn-sm'>view</Link>
+                                                <Link to="" className='btn btn-warning btn-sm ms-2'>Edit</Link>
+                                                <Link to="" className='btn btn-danger btn-sm ms-2'>Del</Link>
+                                            </td>
                                         </tr>
                                     )
                                 })}
