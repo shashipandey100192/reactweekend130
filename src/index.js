@@ -21,6 +21,7 @@ import Mycar from './modules/services/Mycar';
 import Mymobile from './modules/services/Mymobile';
 import Myleptop from './modules/services/Myleptop';
 import Detailspage from './modules/dashboard/Detailspage';
+import Myform from './modules/dashboard/Myform';
 
 
 
@@ -46,6 +47,7 @@ root.render(
               <Route path='leptop' element={<Myleptop/>}/>
               <Route path='*' element={<Myerrorpage/>}/>
        </Route>
+       <Route path='myform' element={<Myform/>}/>
        <Route path='*' element={<Myerrorpage/>}/>
 
 

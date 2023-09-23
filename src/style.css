@@ -120,3 +120,15 @@ body {
   color:red !important;
   text-decoration: underline !important;
 }
+.userform
+{
+  width:600px;
+}
+
+@media(max-width:500px)
+{
+  .userform
+  {
+    width:100%;
+  }
+}
