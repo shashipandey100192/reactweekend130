@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Loginpage from './modules/auth/Loginpage';
@@ -22,7 +22,11 @@ import Mymobile from './modules/services/Mymobile';
 import Myleptop from './modules/services/Myleptop';
 import Detailspage from './modules/dashboard/Detailspage';
 import Myform from './modules/dashboard/Myform';
+import Localstorage from './modules/dashboard/Localstorage';
 
+// import Mylazyloding from './modules/dashboard/Mylazyloding';
+const Mylanding = lazy(()=> import('./modules/dashboard/Mylazyloding'));
+const Myloader = lazy(()=>import('./modules/dashboard/Myloader'));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -48,6 +52,15 @@ root.render(
               <Route path='*' element={<Myerrorpage/>}/>
        </Route>
        <Route path='myform' element={<Myform/>}/>
+       <Route path='localdata' element={<Localstorage/>}/>
+       <Route path='lazyloading' element={
+        <Suspense fallback={<Myloader/>}>
+          <Mylanding/>
+        </Suspense>
+
+
+       }/>
+       
        <Route path='*' element={<Myerrorpage/>}/>
 
 

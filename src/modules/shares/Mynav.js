@@ -39,6 +39,9 @@ function Mynav() {
           <li className="nav-item">
             <Link className="nav-link" to="myform">form</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="lazyloading">lazy</Link>
+          </li>
           
           
         </ul>

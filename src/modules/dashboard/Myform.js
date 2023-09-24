@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useForm} from 'react-hook-form';
+import { Link } from 'react-router-dom';
 let mydata = [];
 
 function Myform() {
@@ -7,10 +8,11 @@ function Myform() {
 
 const mysubmit = (eles)=>
 {
-  console.log(eles);
-  console.log(formvalue);
+  // console.log(eles);
+  // console.log(formvalue);
   mydata.push(formvalue);
   console.log(mydata);
+  localStorage.setItem("myformdata",JSON.stringify(mydata));
 }
 
   const [formvalue,updatefunction]=useState({
@@ -72,6 +74,7 @@ const mysubmit = (eles)=>
           
           <button type="submit" className='btn btn-primary'>submit</button>
           <button type="reset" className='btn btn-danger ms-3'>cancel</button>
+          <Link className='btn btn-light' to="/localdata">show all data</Link>
             
         </div>
 

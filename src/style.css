@@ -132,3 +132,11 @@ body {
     width:100%;
   }
 }
+
+.load
+{
+  font-size: 100px;
+  color:red;
+  background-color: blue;
+
+}
