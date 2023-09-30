@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./style.css";
 import Myerrorpage from './modules/shares/Myerrorpage';
-import Mylandingpage from './modules/dashboard/Mylandingpage';
 import Myhomepage from './modules/dashboard/Myhomepage';
 import Myreactbootstrappage from './modules/dashboard/Myreactbootstrappage';
 import Mynav from './modules/shares/Mynav';
@@ -26,7 +25,7 @@ import Localstorage from './modules/dashboard/Localstorage';
 
 // import Mylazyloding from './modules/dashboard/Mylazyloding';
 const Mylanding = lazy(()=> import('./modules/dashboard/Mylazyloding'));
-const Myloader = lazy(()=>import('./modules/dashboard/Myloader'));
+// const Myloader = lazy(()=>import('./modules/dashboard/Myloader'));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -54,11 +53,9 @@ root.render(
        <Route path='myform' element={<Myform/>}/>
        <Route path='localdata' element={<Localstorage/>}/>
        <Route path='lazyloading' element={
-        <Suspense fallback={<Myloader/>}>
+        <Suspense fallback={<h1 style={{color:'red',fontSize:'100px',backgroundColor:'blue'}}>loading</h1>}>
           <Mylanding/>
         </Suspense>
-
-
        }/>
        
        <Route path='*' element={<Myerrorpage/>}/>
