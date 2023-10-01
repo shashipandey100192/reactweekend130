@@ -22,6 +22,10 @@ import Myleptop from './modules/services/Myleptop';
 import Detailspage from './modules/dashboard/Detailspage';
 import Myform from './modules/dashboard/Myform';
 import Localstorage from './modules/dashboard/Localstorage';
+import { Provider } from 'react-redux';
+import { Mystore } from './modules/redux/Mystore';
+import Myreduxpage from './modules/redux/Myreduxpage';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 // import Mylazyloding from './modules/dashboard/Mylazyloding';
 const Mylanding = lazy(()=> import('./modules/dashboard/Mylazyloding'));
@@ -31,6 +35,13 @@ const Mylanding = lazy(()=> import('./modules/dashboard/Mylazyloding'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Auth0Provider 
+    domain="dev-2lztdozl12hbrfpe.us.auth0.com"
+    clientId="343eiZvm0TVrW2KrBMTMeoTpgYbfURlZ"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}>
+    <Provider store={Mystore}>
     <BrowserRouter>
     <Mynav/>
       <Routes>
@@ -57,14 +68,15 @@ root.render(
           <Mylanding/>
         </Suspense>
        }/>
-       
+      <Route path='myredux' element={<Myreduxpage/>}/>
        <Route path='*' element={<Myerrorpage/>}/>
 
 
 
       </Routes>
     </BrowserRouter>
-
+    </Provider>
+    </Auth0Provider>
   </React.StrictMode>
 );
 

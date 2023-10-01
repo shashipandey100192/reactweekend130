@@ -42,6 +42,9 @@ function Mynav() {
           <li className="nav-item">
             <Link className="nav-link" to="lazyloading">lazy</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="myredux">redux</Link>
+          </li>
           
           
         </ul>

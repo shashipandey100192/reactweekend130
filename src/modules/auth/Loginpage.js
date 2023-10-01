@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Loginpage() {
+    const { loginWithRedirect } = useAuth0();
   return (
    <div className='mylogin'>
     <div className='rounded'>
@@ -23,6 +25,8 @@ function Loginpage() {
                    <button className='btn btn-primary'>submit</button>
                    <button className='btn btn-danger ms-2'>cancel</button>
                    <Link to="register">New register</Link>
+                   <button onClick={() => loginWithRedirect()}>Log In</button>
+
                 </div>
             </div>
         </div>
